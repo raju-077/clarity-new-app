@@ -32,7 +32,7 @@ export default function Home() {
     ));
    
     const latest = latestNews.map((results,index) =>(
-       <Link to={results.id} key={index}>
+       <Link to={results.link} key={index}>
            <div className="image-wrapper">
              <img src={results.image_url} alt={results.title} loading="lazy"/>
              <div className="img-content">
@@ -42,7 +42,7 @@ export default function Home() {
            </div>
        </Link>
     ));
-     
+
    const lasteststorienew = lateststories.map((news)=>(
          <Link to={`/news/${news.id}`} className="latest-storie-card" key={news.id}>
             <div>
