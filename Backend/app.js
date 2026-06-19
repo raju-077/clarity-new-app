@@ -30,5 +30,16 @@ app.get("/homedetails",async (req,res) => {
     }
 });
 
+app.get("/technology",async (req,res) => {
+    try{
+        const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.SECOND_KEY}`);
+        const data = await response.json();
+        return res.status(200).json({data : data.articles});
+    }catch(err){
+        return res.status(500).json({ error: err.message }); 
+    }
+});
+
+
 app.listen(3000);
 

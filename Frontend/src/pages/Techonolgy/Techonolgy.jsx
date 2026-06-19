@@ -8,9 +8,9 @@ export default function Technology() {
     useEffect(() =>{
         const fetchtechnew = async () =>{
             try{
-                const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=7c6759e9bf1d4e2e899dc72de5375ff5`);
-                const data = await response.json();
-                settechnew(data.articles);
+                const response = await fetch('http://localhost:3000/technology');
+                const datas = await response.json();
+                settechnew(datas.data);
             }catch(err){
                 console.log(err);
             }
