@@ -19,5 +19,16 @@ app.get("/home", async (req,res)=>{
     }
 });
 
+
+app.get("/homedetails",async (req,res) => {
+    try{
+        const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${process.env.THIRD_KEY}`);
+        const data = await response.json();
+        return res.status(200).json({data});
+    }catch(err){
+        return res.status(500).json({ error: err.message }); 
+    }
+});
+
 app.listen(3000);
 

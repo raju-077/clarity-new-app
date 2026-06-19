@@ -9,7 +9,7 @@ export default function HomeDetails(){
     useEffect(()=>{   
         const fetchdatas = async () => {
             try{
-                const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=7118992bda1857e601fc447fed2a6d5a`);
+                const response = await fetch("http://localhost:3000/homedetails");
                 const data_three = await response.json();
                 console.log(data_three);
                 const onetwo = data_three.articles;
