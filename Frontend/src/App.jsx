@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from  "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Layout from "./components/Layout";
 import Home from "./pages/Home/Home";
 import HomeDetails from "./pages/Home/Homedetails";
@@ -21,28 +22,31 @@ import "./index.css";
 export default function App() {
 
   return (
-     <BrowserRouter>
-        <Routes>
-            <Route  element={<Layout />}>
-               <Route path="/" element={<HomeLayout />}>
-                  <Route index element={<Home/>} />
-                  <Route path="news/:id" element={<HomeDetails/>} />
-                  <Route path="*" element={<h1>404 notfound</h1>} />
-               </Route>
-               <Route path="technology" element={<TechonolgyLayout />} >
-                  <Route index element={<Technology />} />
-                  <Route path=":id" element={<TechnologyDetails />} />
-                  <Route path="*" element={<h1>404 notfound</h1>} />
-               </Route>
-               <Route path="sports" element={<Sports />} />
-               <Route path="business" element={<Business />} />
-               <Route path="politics" element={<Politics />} />
-               <Route path="health" element={<Health />} />
-               <Route path="entertainment" element={<Entertainment />} />
-               <Route path="aboutus" element={<About/>}/>
-               <Route path="*" element={<h1>404 notfound</h1>} />
-            </Route>  
-        </Routes>
-     </BrowserRouter>
+     <>
+       <BrowserRouter>
+          <Routes>
+              <Route  element={<Layout />}>
+                 <Route path="/" element={<HomeLayout />}>
+                    <Route index element={<Home/>} />
+                    <Route path="news/:id" element={<HomeDetails/>} />
+                    <Route path="*" element={<h1>404 notfound</h1>} />
+                 </Route>
+                 <Route path="technology" element={<TechonolgyLayout />} >
+                    <Route index element={<Technology />} />
+                    <Route path=":id" element={<TechnologyDetails />} />
+                    <Route path="*" element={<h1>404 notfound</h1>} />
+                 </Route>
+                 <Route path="sports" element={<Sports />} />
+                 <Route path="business" element={<Business />} />
+                 <Route path="politics" element={<Politics />} />
+                 <Route path="health" element={<Health />} />
+                 <Route path="entertainment" element={<Entertainment />} />
+                 <Route path="aboutus" element={<About/>}/>
+                 <Route path="*" element={<h1>404 notfound</h1>} />
+              </Route>  
+          </Routes>
+       </BrowserRouter>
+       <SpeedInsights />
+     </>
   );
 }
