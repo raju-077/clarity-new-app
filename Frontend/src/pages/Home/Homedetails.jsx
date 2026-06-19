@@ -11,10 +11,9 @@ export default function HomeDetails(){
             try{
                 const response = await fetch("http://localhost:3000/homedetails");
                 const data_three = await response.json();
-                console.log(data_three);
-                const onetwo = data_three.articles;
+                console.log(data_three.data);
+                const onetwo = data_three.data;
                 const foundArticle = onetwo.find(item => item.id === id);
-                
                 setHomeNewsDetails(foundArticle);
             }catch(err){
                 console.log(err);
