@@ -5,7 +5,7 @@ require('dotenv').config({ path: './.backendenv' });
 
 app.use(cors());
 
-app.get("/", async (req,res)=>{
+app.get("/home", async (req,res)=>{
     try{
          const response_one = await fetch(`https://newsdata.io/api/1/latest?apikey=${process.env.FIRST_KEY}&size=1`);
          const response_two = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.SECOND_KEY}`);

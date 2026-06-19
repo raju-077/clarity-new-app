@@ -11,7 +11,7 @@ export default function Home() {
     useEffect(()=>{
         const fetchdata = async () => {
             try{
-                const response = await fetch("http://localhost:3000/");
+                const response = await fetch("http://localhost:3000/home");
                 const data = await response.json();
                 setLatestNews(data.data_one);
                 setTrendingNews(data.data_two);
