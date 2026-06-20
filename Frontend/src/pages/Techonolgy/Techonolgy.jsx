@@ -8,7 +8,7 @@ export default function Technology() {
     useEffect(() =>{
         const fetchtechnew = async () =>{
             try{
-                const response = await fetch('http://localhost:3000/technology');
+                const response = await fetch('/technology');
                 const datas = await response.json();
                 settechnew(datas.data);
             }catch(err){
