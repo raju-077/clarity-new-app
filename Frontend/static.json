@@ -1,0 +1,19 @@
+{
+  "services": [
+    {
+      "type": "web",
+      "name": "react-router-app",
+      "env": "static",
+      "buildCommand": "npm run build",
+      "publishPath": "dist",
+      "routes": [
+        {
+          "type": "rewrite",
+          "source": "/*",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
+
