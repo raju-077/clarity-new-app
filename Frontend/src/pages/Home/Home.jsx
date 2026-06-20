@@ -11,7 +11,7 @@ export default function Home() {
     useEffect(()=>{
         const fetchdata = async () => {
             try{
-                const response = await fetch("/home");
+                const response = await fetch("https://clarity-new-app.onrender.com/home");
                 const data = await response.json();
                 setLatestNews(data.data_one);
                 setTrendingNews(data.data_two);

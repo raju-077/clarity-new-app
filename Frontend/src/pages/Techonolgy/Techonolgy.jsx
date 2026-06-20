@@ -8,7 +8,7 @@ export default function Technology() {
     useEffect(() =>{
         const fetchtechnew = async () =>{
             try{
-                const response = await fetch('/technology');
+                const response = await fetch('https://clarity-new-app.onrender.com/technology');
                 const datas = await response.json();
                 settechnew(datas.data);
             }catch(err){

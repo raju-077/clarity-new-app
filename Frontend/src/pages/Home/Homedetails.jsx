@@ -9,7 +9,7 @@ export default function HomeDetails(){
     useEffect(()=>{   
         const fetchdatas = async () => {
             try{
-                const response = await fetch("/homedetails");
+                const response = await fetch("https://clarity-new-app.onrender.com/homedetails");
                 const data_three = await response.json();
                 console.log(data_three.data);
                 const onetwo = data_three.data;
