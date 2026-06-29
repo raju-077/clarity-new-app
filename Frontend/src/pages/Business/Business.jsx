@@ -19,10 +19,11 @@ export default function Politics() {
     },[]);
     
     const BusinessList = Business.map((articles)=> (
-        <div>
+        <div className="Business-second-BusinessList">
             <Link  key={articles.id}>
-                 <div>source : {articles.source.id}</div>
-                 <h3>{articles.title}</h3>
+                 <img src={articles.image} alt={articles.title} loading="lazy"/>
+                 <div>source : {articles.source.name}</div>
+                 <h4>{articles.title}</h4>
                  <p>{articles.description}</p>
             </Link>
         </div>
@@ -37,10 +38,10 @@ export default function Politics() {
                     <br></br>economic forces shaping our world.</p>
             </div>
             <div className="Business-second-container">
-                <div>
+                <div className="Business-second-first">
                     Latest Updates
                 </div>
-                <div>
+                <div className="Business-second-second">
                     {BusinessList}
                 </div>
             </div>

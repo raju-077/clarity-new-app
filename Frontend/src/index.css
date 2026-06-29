@@ -101,3 +101,48 @@
     margin-top: -10px;
     opacity: 0.6;
 }
+
+.Business-second-container  {
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.Business-second-second{
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.Business-second-BusinessList {
+    height: 350px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    overflow-wrap: break-word; 
+    word-break: break-all; 
+    overflow: hidden;
+}
+.Business-second-BusinessList > a {
+   text-decoration: none;
+   color: #1b365d;
+   display: flex;
+   flex-direction: column;
+   margin-left: 10px;
+   
+}
+.Business-second-BusinessList > a > img {
+    width: 260px;
+    height: 150px;
+    box-shadow:  grey;
+}
+
+.Business-second-BusinessList > a > div {
+   margin-top: 20px;
+   color: black;
+}
