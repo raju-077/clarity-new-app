@@ -40,6 +40,16 @@ app.get("/technology",async (req,res) => {
     }
 });
 
+app.get("/Business", async (req,res) => {
+    try{
+        const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=business&apikey=${process.env.THIRD_KEY}`);
+        const data = await response.json();
+        return res.status(200).json({data : data.articles});
+    }catch(err){
+        return res.status(500).json({ error: err.message }); 
+    }
+});
+
 
 app.listen(3000);
 module.exports = app;

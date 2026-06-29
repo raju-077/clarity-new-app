@@ -51,7 +51,7 @@ export default function HomeDetails(){
                     <div>We apologize, but the full article is unavailable because we are using a free API plan. 
     You can read the complete story directly on the publisher's website.</div>
                   </div>
-                  <Link>Link : {HomeNewsDetails.url}</Link>
+                  <Link to={HomeNewsDetails.url}>Link : {HomeNewsDetails.url}</Link>
               </div>   
          </div>
        </main>

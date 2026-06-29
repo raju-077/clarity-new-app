@@ -65,3 +65,39 @@
     border-radius: 20px;
     box-shadow: 2px  13px 20px #1b365d;
 }
+
+
+/* sport css here completly */
+
+.sport-first-container {
+    margin-left : 60px;
+    margin-right : 60px;
+    margin-top : 40px;
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+}
+
+.sport-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+.sport-description {
+
+}
+
+/*  Business */
+.Business-first-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-right: 60px;
+    color: black;
+}
+
+.Business-first-container > p {
+    margin-top: -10px;
+    opacity: 0.6;
+}
